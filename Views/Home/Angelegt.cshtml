@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Einkaufsliste.Models.Position>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+</head>
+<body>
+    <div class="text-center p-2">
+        <h2>Here is the shopping list</h2>
+        <table class="table table-bordered table-striped table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Anzahl</th>
+                    <th>Geschäft</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Einkaufsliste.Models.Position item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Anzahl</td>
+                        <td>@item.Geschäft</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a asp-action="Index" class="btn btn-primary m-2">Home</a>
+    <a asp-action="ArtikelForm" class="btn btn-primary m-2 " >Back</a>
+</body>
+</html>

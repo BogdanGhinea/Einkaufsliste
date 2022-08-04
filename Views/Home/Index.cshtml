@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Einkaufsliste</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="text-capitalize bg-primary text-light">Welcome to the Shop</h1>
+    </div>
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+            <div class=" col card " style="width: 18rem;">
+                <img src="../lib/images/Depositphotos_202171764_XL.jpg" class="card-img-top width=212px height=212px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">New Article</h5>
+                    <p class="card-text"> Woud you like to add a new article in the list?</p>
+                    <a class="btn btn-primary" asp-action="ArtikelForm"> Add Article</a>
+                </div>
+            </div>
+
+            <div class=" col card " style="width: 18rem;">
+                <img src="../lib/images/Depositphotos_289865566_XL.jpg" class="card-img-top  width=212px height=212px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">See Aticles</h5>
+                    <p class="card-text">Woud you like to see the articles that you have ?</p>
+                    <a class="btn btn-primary" asp-action="Angelegt">To List</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
+

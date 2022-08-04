@@ -1,0 +1,48 @@
+﻿@model Einkaufsliste.Models.Position
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Article List</title>
+   </head>
+<body >
+    <h5 class="bg-primary text-white text-center m-2 p-2">RSVP</h5>
+    <form class="m-2" asp-action="ArtikelForm" method="post">
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="Name">Name:</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div>
+                <span asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Anzahl">Anzahl:</label>
+                <input asp-for="Anzahl" type="number" class="form-control quantity" value="1" min="0" max="10" placeholder="maximum of 10" />
+            </div>
+            <div>                
+                <span asp-validation-for="Anzahl" method="MaxAnzahl"></span>
+                
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Geschäft">Geschäft:</label>
+                <input asp-for="Geschäft" placeholder="only letters" class="form-control" />
+            </div>
+            <div>
+                <span asp-validation-for="Geschäft"></span>
+            </div>
+
+        </div>
+        <button class="btn btn-primary m-4" type="submit">Save</button>
+        <a asp-action="Index" class="btn btn-primary m-4 ">Back</a>
+    </form>
+   
+</body>
+</html>

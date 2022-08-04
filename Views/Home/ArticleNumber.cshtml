@@ -1,0 +1,16 @@
+﻿@model int
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Congrats</title>
+</head>
+<body  class="text-center p-2 font-weight-bold"style="color:blue"   >
+    You have @Model articles
+    <a  class="btn btn-primary text-center p-2 m-2" asp-action="Index" > <h5>Home</h5> </a>
+</body>
+</html> 
